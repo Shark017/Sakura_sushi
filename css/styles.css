@@ -1,0 +1,466 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: #2C2D2F;
+    font-family: sans-serif;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+body {
+    margin: 0px auto;
+}
+
+@media (max-width: 1300px) {
+    .wrapper {display: none;}
+}
+
+@media (min-width: 1301px) {
+    .wrapper-mobile {display: none;}
+}
+
+.wrapper {
+    max-width: 1300px;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.header__content, .header__content-navigation, .header__content-logo, .header__content-basket, 
+.menu__content-navigation, .menu__content-navigation-item-container, .main__window-to-main-page, 
+.footer__bottom-content, .footer__bottom-content-logo, .footer__bottom-content-navigation, 
+.footer__contacts-list, .footer__contacts-list div, .main__window-content, .main__window-content-item,
+.footer__mobile-contacts, .footer__mobile-contacts-list div, .main__window-mobile-menu-list-item-panel {
+    display: flex;
+}
+
+.header__content {
+    flex-wrap: nowrap;
+}
+
+.menu__content-navigation-item-container {
+    flex-wrap: wrap;
+}
+
+.header__content, a.header__content-navigation-item-link:link, a.header__content-navigation-item-link:visited, 
+a.header__content-login-link, a.header__content-basket-text-link, a.main__window-to-main-page-link,
+.menu, a.menu__content-navigation-item-link, 
+.footer__content, a.footer__bottom-content-navigation-item-link:link, 
+a.footer__bottom-content-navigation-item-link:visited, .main__window-content-item, .main__window-login-form,
+.main__window-login-form-button-enter, .main__window-content-item-basket, .main__window-content-item-delivery,
+.main__window-content-item-job, .main__window-content-item-about  {
+    color: #FF7373;
+    text-decoration: none;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.header__content, .menu__content-header, .footer__content {
+    background-color: #2C2D2F;
+}
+
+.header__content, .menu__content-navigation-item-link, .main__window-to-main-page, .footer__content, 
+.main__window-content-item, .main__window-content-item-basket, .main__window-content-item-delivery,
+.main__window-content-item-job, .main__window-content-item-about, .main__window-menu-list-item-price {
+    font-size: 20px;
+}
+
+a.header__content-navigation-item-link:hover, a.header__content-login-link:hover, 
+a.header__content-basket-text-link:hover, a.main__window-to-main-page-link:hover, 
+a.menu__content-navigation-item-link:hover, a.footer__bottom-content-navigation-item-link:hover, 
+.main__window-login-form-button-enter:hover {
+    color: #4671D5;
+    cursor: pointer;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.header__content, .header__content-navigation, .header__content-logo, .header__content-basket, 
+.menu__content-navigation-item-container, .footer__content, .footer__bottom-content, .footer__bottom-content-logo, 
+.footer__bottom-content-navigation, .main__window-mobile-content-item-job p {
+    align-items: center;
+}
+
+.header__content, .header__content-navigation, .header__content-logo, .header__content-basket,
+.footer__bottom-content-logo, .footer__bottom-content-navigation {
+    justify-content: space-evenly;
+}
+
+.header__content-logo-image, .menu__content-logo-image, .main__window-to-main-page-logo, 
+.footer__bottom-content-logo-image {
+    width: 40px;
+}
+
+.header__content, .footer__content {
+    height: 55px;
+}
+
+.header__content-logo-image, .footer__bottom-content-logo-image {
+    margin: 0px 10px 0px 0px;
+}
+
+.header__content-navigation-item-link {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.header__content-login{
+    margin-left: -63px;
+}
+
+.header__content-basket {
+    margin-right: 260px;
+}
+
+.header__content-basket-logo {
+    width: 40px;
+    margin-top: 10px;
+}
+
+.menu {
+    float: right;
+    width: 20vw;
+    border: 5px solid #2C2D2F;
+}
+
+.menu__content-header, .menu__content-navigation-item-container {
+    padding: 15px 0px;
+}
+
+.menu__content-header, .main__window-content-item-delivery > p, .main__window-content-item-job > p, 
+.main__window-content-item-about > p, .main__window-content-navigation-list > li, 
+.menu__mobile-content-navigation-item-link, .footer__mobile-developer-info,
+.main__window-mobile-content-item-basket p, .main__window-mobile-menu-list-item {
+    text-align: center;
+}
+
+.menu__content-navigation, .main__window-content {
+    flex-direction: column;
+}
+
+.menu__content-navigation-item-image {
+    width: 70px;
+    height: 69px;
+    margin-left: 20px;    
+}
+
+.menu__content-navigation-item-container {
+    border-bottom: 5px solid #2C2D2F;
+    width: 19.7 vw;
+}
+
+.menu__content-navigation-item-link {
+    margin-left: 20px;
+    width: 50px;
+}
+
+.menu__content-logo-image{
+    margin-left: 50px;
+}
+
+.slider, .main__window {
+    width: 79vw;
+    height: 1012px;
+}
+
+.slider__img {
+    height: 1010px;
+}
+
+.main__window-to-main-page, .main__window-mobile-menu-list-item-img, .wrapper-mobile {
+    margin: 0px auto;
+}
+
+.main__window-to-main-page {
+    width: 150px;
+}
+
+.main__window-to-main-page-logo, .main__window-to-main-page-link {
+    margin-top: 30px;
+}
+
+.main__window-content{
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.main__window-content-item{
+    height: 250px;
+    margin-bottom: 30px;
+}
+
+.main__window-content-item >p {
+    margin: auto 10px;
+}
+
+.main__window-login-form {
+    width: 250px;
+    margin: 100px auto;
+}
+
+.main__window-login-form-button-enter {
+    margin: 10px 0px 10px 50px;
+}
+
+.main__window-content-item-basket {
+    width: 230px;
+    margin: 50px auto;
+}
+
+.main__window-content-item-about > p, .main__window-content-item-delivery > p, .main__window-content-item-job > p {
+    margin: 50px 0px 0px 260px;
+    width: 500px;
+}
+
+.main__window-menu-list-item-price {
+    margin: 10px auto;
+    width: 77px;
+    color: #4671D5;
+}
+
+.discount-window {
+    margin: 50px 0px 0px 30px;
+}
+
+.item-price-set {
+    width: 88px;
+}
+
+.footer__content {
+    height: 150px;
+}
+
+.footer__content, .footer__contacts-list {
+    flex-direction: column;
+}
+
+.footer__top-content-info-text {
+    padding-top: 20px;
+    margin-left: 70px;
+    margin-bottom: 30px;
+}
+
+.footer__bottom-content-logo {
+    margin: 0px 139px 0px 100px;
+}
+
+.footer__bottom-content-navigation-item {
+    margin-right: 80px;
+}
+
+#footer__contacts {
+    width: 300px;
+    height: 150px;
+    top: 1067px;
+    right: 0px;
+    position: absolute;
+}
+
+.footer__contacts-list img {
+    width: 30px;
+}
+
+.footer__contacts-list li {
+    margin: 10px 0px 0px 70px;
+}
+
+.footer__contacts-list p {
+    margin-left: 10px;
+}
+
+.footer__developer-info {
+    font-size: 18px;
+    margin: 10px 0px 0px 270px;
+}
+
+.wrapper-mobile {
+    max-width: 400px;
+}
+
+.wrapper-mobile, .menu__mobile-content-navigation-item-link, .main__window-content-navigation-list a {
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.main__window-content-navigation, .main__window-content-navigation-list > li, .footer__mobile-contacts-list div,
+.footer__mobile-developer-info {
+    margin-top: 30px;
+}
+
+.main__window-content-navigation-list a:active, .menu__mobile-content-navigation-item-link:active {
+    color: #FF7373;
+}
+
+.menu__mobile-content-navigation-item {
+    margin: 30px auto;
+    width: 300px;
+}
+
+.menu__mobile-content-navigation-item-link {
+    margin: 0px 10px;
+    width: 180px;
+}
+
+.main__window-mobile-content-item-about, .main__window-mobile-content-item-basket, 
+.main__window-mobile-content-item-delivery, .main__window-mobile-content-item-job,
+.main__window-mobile-login-form  {
+    margin: 50px 0px;
+}
+
+.main__window-mobile-content-item-about p, .main__window-mobile-content-item-delivery p,
+.main__window-mobile-content-item-discount p, .main__window-mobile-content-item-job p {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.footer__mobile-contacts-list img {
+    width: 50px;
+    margin: 0px 30px;
+}
+
+.footer__mobile-contacts-list p {
+    margin-top: 10px;
+}
+
+.footer__mobile-developer-info, .main__window-mobile-content-item-about, .footer__mobile-contacts-list p,
+.main__window-mobile-content-item-basket, .main__window-mobile-content-item-delivery,
+.main__window-mobile-content-item-job, .main__window-mobile-menu-list-item {
+    font-size: 20px;
+}
+
+.main__window-mobile-content-item-basket, .main__window-mobile-content-item-job {
+    height: 25vh;
+}
+
+.main__window-mobile-content-item-job p {
+    text-align: center;
+}
+
+.main__window-mobile-content-item-login, .main__window-mobile-menu-list-item, .wrapper-mobile, 
+.menu__mobile-content-navigation-item-link, .main__window-content-navigation-list a {
+    color: white;
+}
+
+.main__window-mobile-content-item-login {
+    font-size: 15px;
+}
+
+.main__window-mobile-login-form {
+    width: 180px;
+    margin: 50px auto;
+}
+
+.main__window-mobile-login-form-button-enter {
+    margin: 20px 50px;
+    padding: 10px 20px;
+}
+
+.main__window-mobile-menu-list-item p {
+    margin: 10px 0;
+}
+
+.main__window-mobile-menu-list-item {
+    margin-top: 30px;
+}
+
+.main__window-mobile-menu-list-item-img {
+    width: 200px;
+}
+
+.main__window-mobile-menu-list-item-panel {
+    width: 200px;
+    margin: 30px auto;
+}
+
+.menu-button-mobile, .menu-button-mobile-order {
+    color: white;
+    background-color: #2C2D2F;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.menu-button-mobile:active, .menu-button-mobile-order:active {
+    color: white;
+    background-color: #FF7373;
+}
+
+.menu-button-mobile {
+    width: 70px;
+    height: 70px;
+}
+
+.main__window-mobile-menu-list-item-panel {
+    align-items: center;
+}
+
+.menu-number-mobile {
+    margin: 0px auto;
+    font-size: 25px;
+}
+
+.menu-button-mobile-order {
+    width: 130px;
+    height: 70px;
+    margin-bottom: 30px;
+}
